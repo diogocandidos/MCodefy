@@ -29,7 +29,7 @@ function NavBar() {
             <div className="App">
             <div>
                 <input placeholder="username" onChange={(e) => setRegisterUsername(e.target.value)} />
-                <input placeholder="password" onChange={(e) => setRegisterPassword(e.target.value)} />
+                <input placeholder="password" type="password" onChange={(e) => setRegisterPassword(e.target.value)} />
                 <button onClick={register}>Sign up</button>
             </div>
             </div>

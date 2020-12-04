@@ -19,7 +19,10 @@ const Home = () => {
       },
       withCredentials: true,
       url: "http://localhost:4000/login",
-    }).then((res) => console.log(res));
+    }).then((res) => {
+      console.log(res)
+      getUser() 
+    });
   };
   
   
@@ -46,11 +49,8 @@ const Home = () => {
           </p>
         <div>
           <input placeholder="username" onChange={(e) => setLoginUsername(e.target.value)} />
-          <input placeholder="password" onChange={(e) => setLoginPassword(e.target.value)} />
-          <button onClick= {()=>{ 
-            login()
-            getUser()
-          }}>Log in</button>
+          <input placeholder="password" type="password" onChange={(e) => setLoginPassword(e.target.value)} />
+          <button onClick= {login}>Log in</button>
           {data ? <h1>Welcome {data.username}</h1> : null}
       </div>
       <br></br>
